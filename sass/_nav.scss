@@ -1,0 +1,29 @@
+.top_menu {
+  background-color: #243240;;
+}
+
+.navbar-nav {
+
+  .nav-link {
+    font-family: $nav-font;
+  }
+}
+
+.main_menu {
+
+  .dropdown-menu {
+    margin-top: 0;
+    // @include transition(all, 0.3s);
+  }
+
+  .dropdown:hover {
+  
+    a {
+    
+      &+.dropdown-menu {
+        display: block;
+        // @include transition(all, 0.3s);
+      }
+    }
+  }
+}
