@@ -2,6 +2,10 @@
   background-color: #243240;
 }
 
+.navbar-brand img {
+  max-width: 290px;
+}
+
 .navbar-nav .nav-link {
   font-family: "Lato", sans-serif;
 }
@@ -33,11 +37,14 @@ a:hover {
 }
 
 .header_page {
-  max-width: 1440px;
   height: 100vh;
   margin: 0 auto;
-  padding-left: 3.25%;
-  padding-right: 3.25%;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
+  /* @include media-breakpoint-down(lg) {
+    padding-left: 0;
+    padding-right: 0; 
+  } */
 }
 
 .header_page .header_page-inner {
@@ -55,5 +62,12 @@ a:hover {
   height: 100%;
   border-bottom-right-radius: 100px;
   background-color: rgba(66, 95, 143, 0.52);
+}
+
+@media (max-width: 1199.98px) {
+  .header_page {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,3 +1,4 @@
+// @import '../lib/bootstrap';
 @import 'variables';
 @import 'mixins';
 @import 'nav';
@@ -21,11 +22,11 @@ a {
 }
 
 .header_page {
-  max-width: $container-headerPage;
+  // max-width: $container-headerPage;
   height: 100vh;
   margin: 0 auto;
-  padding-left: 3.25%;
-  padding-right: 3.25%;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
 
   .header_page-inner {
     position: relative;
@@ -43,4 +44,17 @@ a {
       background-color: rgba(66, 95, 143, 0.52);
     }
   }
+
+  /* @include media-breakpoint-down(lg) {
+    padding-left: 0;
+    padding-right: 0; 
+  } */
 }
+
+@media (max-width: 1199.98px) {
+  .header_page {
+    padding-left: 0;
+    padding-right: 0; 
+  }
+}
+
