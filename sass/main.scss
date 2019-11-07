@@ -1,37 +1,7 @@
 // @import '../lib/bootstrap';
 @import 'variables';
 @import 'mixins';
+@import 'base';
 @import 'nav';
 @import 'header';
-@import 'page';
-
-body {
-  font-family: $theme-font; 
-  color: $theme-color;
-}
-
-h2 {
-  font-size: 3.125rem;
-  font-weight: 300;
-  line-height: 1.1;
-  text-transform: uppercase;
-}
-
-a {
-  color: $theme-color;
-
-  &:hover {
-    color: $hover-color;
-  }
-}
-
-p {
-  color: #727A83;
-  line-height: 1.75;
-}
-
-.container_inner {
-  max-width: $container-content;
-  margin: 0 auto;
-}
-
+@import 'home';

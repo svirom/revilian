@@ -1,3 +1,4 @@
+/* top navigation section */
 .navbar-nav {
   .nav-link {
     padding: 0.2rem 1rem;
@@ -5,6 +6,7 @@
   }
 }
 
+/* top menu */
 .top_menu {
   background-color: #243240;
 
@@ -30,17 +32,30 @@
 .main_nav {
   background-color: transparent;
 
+  @include respond-to('extralarge') {
+    background-color: #243240;
+  }
+
   .navbar {
     padding: 1.25rem 1rem;
+
+    @include respond-to('extralarge') {
+      padding: 0.1rem;
+    }
   }
 }
 
 .navbar-brand {
   img {
     max-width: 290px;
+
+    @include respond-to('extralarge') {
+      max-width: 178px;
+    }
   }
 }
 
+/* main menu */
 .main_menu {
   .nav-item {
     padding: 0 0.5rem;
@@ -72,27 +87,13 @@
   }
 }
 
+/* assessment button */
 .btn-assessment {
   padding: 0.5rem 1rem;
   background-color: #3291DD;
 
   &:hover {
     text-decoration: underline;
-  }
-}
-
-@media (max-width: 1199px) {
-  .main_nav {
-    background-color: #243240;
-    
-    .navbar {
-      padding: 0.1rem;
-    }
-  }
-  .navbar-brand {
-    img {
-      max-width: 178px;
-    }
   }
 }
 

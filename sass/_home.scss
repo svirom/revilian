@@ -1,17 +1,27 @@
-// featured press section
+/* featured press section */
 .featured_press {
   position: relative;
   padding-top: 4.5rem;
   padding-bottom: 4.5rem;
+
+  @include respond-to('medium') {
+    padding-bottom: 2rem;
+  }
 
   &:after {
     display: block;
     position: absolute;
     content: '';
     width: 50%;
-    margin-left: 25%;
+    left: 25%;
     bottom: 3rem;
     border-bottom: 1px solid #D8D8D8;
+
+    @include respond-to('medium') {
+      width: auto;
+      left: 15px;
+      right: 15px;
+    }
   }
 
   h4 {
@@ -24,9 +34,10 @@
   }
 }
 
-// blue flamingo section
+/* blue flamingo section */
 .flamingo_section {
-  overflow-x: hidden;
+  // overflow-x: hidden;
+  overflow: hidden;
 
   h2 {
     color: #0B74C6;
@@ -34,6 +45,20 @@
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    @include respond-to('medium') {
+      max-width: 200px;
+      font-size: 1.875rem;
+      line-height: 1.17;
+    }
+  }
+
+  p {
+    @include respond-to('medium') {
+      max-width: 260px;
+      margin-top: 260px;
+      font-size: 0.75rem;
+    }
   }
 
   .flamingo_mobile {
@@ -44,7 +69,7 @@
   }
 }
 
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
   .flamingo_section {
     h2 {
       max-width: 200px;
@@ -57,4 +82,4 @@
       font-size: 0.75rem;
     }
   }
-}
+} */
