@@ -1,0 +1,134 @@
+.header_page {
+  // max-width: $container-headerPage;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding-left: 3rem;
+  padding-right: 3rem;
+
+  @include respond-to('medium') {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* @include media-breakpoint-down(lg) {
+    padding-left: 0;
+    padding-right: 0; 
+  } */
+}
+
+.header_page-inner {
+  position: relative;
+  height: 100%;
+  min-height: 100vh;
+  border-bottom-right-radius: 100px;
+
+  &:after {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-bottom-right-radius: 100px;
+  }
+
+  p {
+    color: #ffffff;
+  }
+}
+
+.header_homepage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #133A59 url('../img/header-page-img.png') center/cover no-repeat;
+
+  &:after {
+    background-color: rgba(66, 95, 143, 0.52);
+  }
+
+  .header_homepage-wrapper {
+    max-width: 654px;
+    padding: 2.5rem 4.5rem;
+    border-bottom-right-radius: 4rem;
+    background-color: rgba(#1B3950, 0.97);
+    z-index: 10;
+
+    .homepage-pr {
+      p {
+        float: left;
+        margin: 0;
+        text-transform: uppercase;
+        font-size: 6.875rem;
+        font-weight: 800;
+        line-height: 7.5rem;
+
+        @include respond-to('medium') {
+          float: none;
+          font-size: 6.1825rem;
+        }
+      }
+    }
+
+    .homepage-content {
+      padding-right: 1rem;
+      text-align: right;
+
+      p {
+        float: none;
+        text-transform: uppercase;
+        font-weight: 500;
+        line-height: 2.9375rem;
+
+        &:first-child {
+          font-size: 1.875rem;
+          
+        }
+
+        &:last-child {
+          font-size: 2.8125rem;
+        }
+      }
+    }
+
+    .homepage-text {
+      p {
+        margin-bottom: 3.5rem;
+        line-height: 1.5625;
+      }
+
+      .btn-assessment {
+        display: inline-block;
+        padding: 0.65rem 1.5rem;
+        font-size: 1.2rem;
+        line-height: 1.2;
+
+        &:hover {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
+
+.homepage-arrow {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  @include transform(translateX(-50%));
+  @include transition(bottom, 0.3s);
+  padding: 0.5rem 0.5rem;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 2rem;
+  z-index: 20;
+
+  img {
+    @include transition(margin-top, 0.3s);
+  }
+
+  &:hover {
+    img {
+      margin-top: -6px;
+    }
+  }
+}
