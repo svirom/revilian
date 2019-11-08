@@ -68,10 +68,16 @@
 .main_menu {
   @include respond-to('extralarge') {
     position: absolute;
-    width: 100%;
+    width: 95%;
     top: 40px;
     padding: 2rem 0;
     background-color: #365171;
+    @include transform(translateX(106%));
+    @include transition(all, 0.5s);
+
+    &.main_menu-active {
+      @include transform(translateX(6%));
+    }
   }
 
   .nav-item {
@@ -102,10 +108,33 @@
         display: none;
         float: right;
         @include transform(translateY(8px));
+        @include transition(transform, 0.5s);
 
         @include respond-to('extralarge') {
           display: inline-block;
         }
+      }
+
+      &.dropdown-active {
+        @include respond-to('extralarge') {
+          background-color: #517AAB;
+
+          img {
+            @include transform(rotate(180deg) translateY(-8px));
+          }
+  
+          .dropdown-menu {
+            background-color: #517AAB;
+          }
+        }
+      }
+    }
+
+    .btn-assessment {
+      @include respond-to('extralarge') {
+        display: inline-block;
+        margin: 2.5rem 2rem;
+        padding: 0.2rem 1rem;
       }
     }
   }
@@ -117,7 +146,11 @@
     border-radius: 0;
     border-color: #365171;
     background-color: #365171;
-    // @include transition(all, 0.3s);
+
+    @include respond-to('extralarge') {
+      padding: 0.5rem 0;
+      border: 0;
+    }
 
     .dropdown-item {
       position: relative;
@@ -129,17 +162,15 @@
       &:hover {
         background-color: darken(#365171, 10%);
       }
-    }
-  }
 
-  /* .dropdown:hover {
-  
-    a {  
-      &+.dropdown-menu {
-        display: block;
+      @include respond-to('extralarge') {
+        padding-left: 2rem;
+        font-size: 0.875rem;
+        font-weight: 400;
+        background-image: none;
       }
     }
-  } */
+  }
 }
 
 /* assessment button */
@@ -184,6 +215,7 @@
   width: 17px;
   height: 16px;
   right: 1rem;
+  top: 0.8rem;
   border-radius: 0px;
   background: transparent;
 
@@ -211,17 +243,17 @@
   }
 
   &.nav-active {
-    height: 28px;
+    height: 17px;
 
     span {
       opacity: 0;
     }
     &:before {
-      top: 12px;
+      top: 7px;
       @include transform(rotate(45deg));
     }
     &:after {
-      top: 12px;
+      top: 7px;
       @include transform(rotate(-45deg));
     }
   }

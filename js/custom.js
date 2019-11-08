@@ -16,15 +16,6 @@ $(document).ready(function() {
     });
   });
 
-  // show/hide submenu by click on menu button (mobile)
-	$('.main_nav .dropdown').on('click', function(event) {
-		if ($(document).width() < 1199) {
-      console.log(event.target);
-      event.preventDefault();
-			$(this).stop().find('.dropdown-menu').slideToggle(500);
-		}
-	});
-
   // link on homepage header
   $(".homepage-arrow").on('click', function (event) {
 
@@ -38,6 +29,25 @@ $(document).ready(function() {
       }, 800, function () {
         // window.location.hash = hash - 80;
       });
+    }
+  });
+
+  // show/hide submenu by click on menu button (mobile)
+	$('.main_menu .dropdown').on('click', function(event) {
+		if ($(document).width() < 1200) {
+      event.preventDefault();
+      $(this).toggleClass('dropdown-active');
+			$(this).stop().find('.dropdown-menu').slideToggle(500);
+		}
+  });
+  
+  // mobile menu toggle
+  $('.nav-opener').on('click', function(event) {
+    event.preventDefault();
+
+    if ($(document).width() < 1200) {
+      $(this).toggleClass('nav-active');
+      $(this).next('.main_menu').toggleClass('main_menu-active');
     }
   });
 
