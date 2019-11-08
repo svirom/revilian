@@ -22,7 +22,7 @@
     <!-- main header navigation -->
     <div class="header_nav fixed-top">
       <!-- top menu -->
-      <section class="top_menu d-none d-lg-block">
+      <section class="top_menu d-none d-xl-block">
         <div class="container mx-auto">
           <div class="row">
             <div class="col">
@@ -46,40 +46,55 @@
 
       <!-- main navigation -->
       <section class="main_nav">
-        <div class="container mx-auto">
+        <div class="container-fluid container_inner mx-auto px-0 px-xl-3">
           <div class="row">
             <div class="col">
               <nav class="navbar navbar-expand-xl">
-                <a class="navbar-brand" href="/">
+                <a class="navbar-brand pl-3 pl-xl-0" href="/">
                   <img src="img/revilian_logo.png" alt="Logo">
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#top_menu" aria-controls="top_menu" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
+                <!-- mobile button -->
+                <a href="#" class="nav-opener"><span></span></a>
                   
-                <div class="collapse navbar-collapse" id="main_menu">
-                  <ul class="navbar-nav ml-lg-auto main_menu">
+                <!-- <div class="main_menu-wrapper"> -->
+                  <ul class="navbar-nav ml-lg-auto main_menu" id="main_menu">
                     <li class="nav-item dropdown">
                       <a class="nav-link" href="#">Strategy</a>
                       <ul class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Branding</a>
-                        <a class="dropdown-item" href="#">Analysis</a>
+                        <li>
+                          <a class="dropdown-item" href="#">Branding</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">Analysis</a>
+                        </li>
                       </ul>
                     </li>
                     <li class="nav-item dropdown">
                       <a class="nav-link" href="#">Public relations</a>
                       <ul class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Media</a>
-                        <a class="dropdown-item" href="#">Communication</a>
-                        <a class="dropdown-item" href="#">Advertisement</a>
+                        <li>
+                          <a class="dropdown-item" href="#">Media</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">Communication</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">Advertisement</a>
+                        </li>
                       </ul>
                     </li>
                     <li class="nav-item dropdown">
                       <a class="nav-link" href="#">Digital marketing</a>
                       <ul class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Social</a>
-                        <a class="dropdown-item" href="#">Marketing</a>
-                        <a class="dropdown-item" href="#">Content</a>
+                        <li>
+                          <a class="dropdown-item" href="#">Social</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">Marketing</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">Content</a>
+                        </li>
                       </ul>
                     </li>
                     <li class="nav-item">
@@ -92,7 +107,7 @@
                       <a class="nav-link btn-assessment" href="#">Free Assessment</a>
                     </li>
                   </ul>
-                </div>
+                <!-- </div> -->
               </nav>
             </div>
           </div>
@@ -118,9 +133,13 @@
               <a class="btn-assessment" href="#">Request an Assessment Call</a>
             </div>
           </div>
-          <a class="homepage-arrow" href="#">
-            <img src="img/arrow-down.png" alt="Arrow">
+          <a class="homepage-arrow" href="#press_companies">
+            <img src="img/arrow-down-big.png" alt="Arrow">
           </a>
+        </div>
+        <div class="homepage-text-mobile text-center d-block d-md-none">
+          <p>We help innovative teams establish a presence in their industry by acquiring valuable press mentions with reputable business and media outlets worldwide through compelling stories, published to thrill investors and grow your userbase.</p>
+          <a class="btn-assessment" href="#">Request an Assessment Call</a>
         </div>
       </section>
     </header><!-- end page header -->
@@ -128,15 +147,15 @@
     <!-- main section -->
     <main>
 
-      <!-- featured press -->
-      <section id="featured_press">
-        <div class="container featured_press">
+      <!-- press companies -->
+      <section id="press_companies">
+        <div class="container press_companies">
           <div class="row">
             <div class="col">
               <h4 class="text-center">Get your company featured in the press.</h4>
             </div>
           </div>
-          <div class="row justify-content-center align-items-center my-5">
+          <div class="row justify-content-center align-items-center mt-1 mt-md-3 mb-5">
             <div class="col-6 col-md-2 text-center mt-5 mb-4">
               <img src="img/bloomberg.png" alt="Bloomberg" class="img-fluid">
             </div>
@@ -202,7 +221,7 @@
             </div>            
           </div>
         </div>
-      </section><!-- end featured press -->
+      </section><!-- end press companies -->
 
       <!-- blue flamingo section -->
       <section class="flamingo_section pt-1 pb-5">
@@ -225,8 +244,10 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="js/custom.js"></script>
   </body>
 </html>

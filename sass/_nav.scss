@@ -3,6 +3,10 @@
   .nav-link {
     padding: 0.2rem 1rem;
     font-family: $nav-font;
+
+    @include respond-to('extralarge') {
+      padding: 0.7rem 2rem;
+    }
   }
 }
 
@@ -31,6 +35,7 @@
 
 .main_nav {
   background-color: transparent;
+  @include transition(background-color, 0.3s);
 
   @include respond-to('extralarge') {
     background-color: #243240;
@@ -40,8 +45,12 @@
     padding: 1.25rem 1rem;
 
     @include respond-to('extralarge') {
-      padding: 0.1rem;
+      padding: 0;
     }
+  }
+
+  &.bkgr {
+    background-color: rgba(#243240, 0.9);
   }
 }
 
@@ -57,8 +66,20 @@
 
 /* main menu */
 .main_menu {
+  @include respond-to('extralarge') {
+    position: absolute;
+    width: 100%;
+    top: 40px;
+    padding: 2rem 0;
+    background-color: #365171;
+  }
+
   .nav-item {
     padding: 0 0.5rem;
+
+    @include respond-to('extralarge') {
+      padding: 0;
+    }
 
     &:last-child {
       padding-right: 0;
@@ -69,26 +90,61 @@
         }
       }
     }
+
+    &.active {
+      a {
+        color: #58B4FD;
+      }
+    }
+
+    &.dropdown {
+      img {
+        display: none;
+        float: right;
+        @include transform(translateY(8px));
+
+        @include respond-to('extralarge') {
+          display: inline-block;
+        }
+      }
+    }
   }
 
+  /* dropdown menu */
   .dropdown-menu {
     margin-top: 0;
+    padding: 1rem 0;
+    border-radius: 0;
+    border-color: #365171;
+    background-color: #365171;
     // @include transition(all, 0.3s);
+
+    .dropdown-item {
+      position: relative;
+      padding: 0.25rem 4.5rem 0.25rem 1.5rem;
+      font-weight: 300;
+      color: #ffffff;
+      background: url('../img/arrow-right.png') right 1rem center no-repeat;
+      
+      &:hover {
+        background-color: darken(#365171, 10%);
+      }
+    }
   }
 
-  .dropdown:hover {
+  /* .dropdown:hover {
   
     a {  
       &+.dropdown-menu {
         display: block;
-        // @include transition(all, 0.3s);
       }
     }
-  }
+  } */
 }
 
 /* assessment button */
 .btn-assessment {
+  font-family: $nav-font;
   padding: 0.5rem 1rem;
   background-color: #3291DD;
 
@@ -108,5 +164,71 @@
       } 
     }
   }
+  .main_menu {
+    .dropdown:hover {
+  
+      a {  
+        &+.dropdown-menu {
+          display: block;
+          // @include transition(all, 0.3s);
+        }
+      }
+    }
+  }
+}
+
+/* mobile opener button */
+.nav-opener {
+  display: none;
+  position: absolute;
+  width: 17px;
+  height: 16px;
+  right: 1rem;
+  border-radius: 0px;
+  background: transparent;
+
+  &:before,
+  &:after,
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    border-radius: 0px;
+    background: $theme-color;
+    @include transition(all, 0.3s);
+  }
+
+  &:before {
+    content: '';
+    top: 7px;
+  }
+
+  &:after {
+    content: '';
+    top: 14px;
+  }
+
+  &.nav-active {
+    height: 28px;
+
+    span {
+      opacity: 0;
+    }
+    &:before {
+      top: 12px;
+      @include transform(rotate(45deg));
+    }
+    &:after {
+      top: 12px;
+      @include transform(rotate(-45deg));
+    }
+  }
+
+  @include respond-to('extralarge') {
+    display: block;
+  }
+
 }
 

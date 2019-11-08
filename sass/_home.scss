@@ -1,5 +1,5 @@
-/* featured press section */
-.featured_press {
+/* press companies section */
+.press_companies {
   position: relative;
   padding-top: 4.5rem;
   padding-bottom: 4.5rem;
@@ -36,7 +36,6 @@
 
 /* blue flamingo section */
 .flamingo_section {
-  // overflow-x: hidden;
   overflow: hidden;
 
   h2 {
@@ -68,18 +67,3 @@
     left: 2rem;
   }
 }
-
-/* @media (max-width: 767px) {
-  .flamingo_section {
-    h2 {
-      max-width: 200px;
-      font-size: 1.875rem;
-      line-height: 1.17;
-    }
-    p {
-      max-width: 260px;
-      margin-top: 260px;
-      font-size: 0.75rem;
-    }
-  }
-} */
