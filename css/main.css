@@ -532,6 +532,12 @@ p {
   overflow: hidden;
 }
 
+@media (max-width: 767px) {
+  .flamingo_section {
+    padding-bottom: 7.5rem;
+  }
+}
+
 .flamingo_section h2 {
   color: #0B74C6;
   background: -webkit-linear-gradient(left, #68BBFC 0%, #0B74C6 100%);
@@ -561,5 +567,123 @@ p {
   width: 415px;
   top: 60px;
   left: 2rem;
+}
+
+/* featured press section */
+.featured_press-wrapper {
+  background-color: #000000;
+}
+
+.featured_press-services {
+  padding-top: 6.25rem;
+  background: url("../img/featured_press_bg.jpg") center/cover no-repeat;
+}
+
+@media (max-width: 991px) {
+  .featured_press-services {
+    padding-top: 4.25rem;
+    text-align: center;
+  }
+}
+
+.featured_press-services h2 {
+  margin-bottom: 2rem;
+  padding-right: 8rem;
+}
+
+@media (max-width: 991px) {
+  .featured_press-services h2 {
+    padding-right: 0;
+    font-size: 1.875rem;
+  }
+}
+
+.featured_press-services p {
+  padding-right: 3.5rem;
+  color: #ffffff;
+}
+
+@media (max-width: 991px) {
+  .featured_press-services p {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .featured_press-services p {
+    font-size: 0.75rem;
+  }
+}
+
+.featured_press-services .btn-pr-services {
+  position: relative;
+  margin: 3rem 0 5rem;
+  padding: 0.435rem 5.325rem 0.435rem 1.5rem;
+  border-radius: 0;
+  border-color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.featured_press-services .btn-pr-services img {
+  position: absolute;
+  top: 11px;
+  right: 24px;
+  -webkit-animation: bounce 3s infinite;
+  animation: bounce 3s infinite;
+}
+
+.featured_press-services .detailed-pr {
+  text-transform: uppercase;
+}
+
+.featured_press-services .detailed-pr span {
+  padding-left: 1rem;
+  vertical-align: middle;
+}
+
+@media (max-width: 991px) {
+  .featured_press-services .detailed-pr span {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .featured_press-services .detailed-pr img {
+    display: block;
+    margin: 0 auto 1.5rem;
+  }
+}
+
+/* featured press animations */
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  40% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+  60% {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  40% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+  60% {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+  }
 }
 /*# sourceMappingURL=main.css.map */
