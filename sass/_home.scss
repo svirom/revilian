@@ -171,3 +171,191 @@
     @include transform(translateX(5px));
   }
 }
+
+.featured_press-secondary {
+  padding-bottom: 4rem;
+
+  .secondary-services-header {
+    position: relative;
+    height: 25rem;
+
+    @include respond-to('large') {
+      height: 14rem;
+    }
+
+    h3 {
+      position: absolute;
+      bottom: 1rem;
+      margin-bottom: 0;
+      font-size: 1.875rem;
+      font-weight: 300;
+      text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.337579);
+
+      @include respond-to('large') {
+        bottom: 0.5rem;
+      }
+    }
+
+    
+    &.secondary-digital {
+      background: url('../img/digital-marketing-service@2x.png') center no-repeat;
+      background-size: 103%;
+
+      h3 {
+        right: 18.5rem;
+
+        @include respond-to('extralarge') {
+          right: auto;
+        }
+      }
+
+      @include respond-to('extracustom') {
+        background-size: 108%;
+      }
+
+      @include respond-to('extralarge') {
+        background-size: auto;
+      }
+
+      @include respond-to('large') {
+        // background-size: 102%;
+        background-size: 126%;
+      }
+    }
+
+    &.secondary-strategy {
+      background: url('../img/strategy-service@2x.png') center no-repeat;
+      background-size: 103%;
+
+      @include respond-to('extracustom') {
+        background-size: 134%;
+      }
+
+      @include respond-to('extralarge') {
+        background-size: auto;
+      }
+
+      @include respond-to('large') {
+        background-size: 102%;
+      }
+    }
+
+    &.secondary-events {
+      background: url('../img/events-service@2x.png') center no-repeat;
+      background-size: 103%;
+
+      @include respond-to('extracustom') {
+        background-size: 132%;
+      }
+
+      @include respond-to('extralarge') {
+        background-size: auto;
+      }
+
+      @include respond-to('large') {
+        background-size: 102%;
+      }
+    }
+    
+  }
+
+  .secondary-services {
+    .secondary-content {
+      ul {
+        position: relative;
+
+        @include respond-to('large') {
+          text-align: center;
+        }
+
+        &:before {
+          display: block;
+          position: absolute;
+          content: '';
+          height: 100%;
+          width: 1px;
+          top: 0;
+          left: -16px;
+          background-color: #4D4D4D;
+
+          @include respond-to('large') {
+            display: none;
+          }
+        }
+
+        li {
+          font-weight: 300;
+          line-height: 2.5;
+
+          @include respond-to('medium') {
+            font-size: 0.75rem;
+          }
+        }
+      }
+
+      &.secondary-content-digital {
+        max-width: 570px;
+
+        @include respond-to('extralarge') {
+          max-width: none;
+        }
+
+        ul {
+          &:before {
+            display: none;
+          }
+
+          @include respond-to('large') {
+            text-align: left;
+          }
+        }
+      }
+    }
+
+  }
+
+  .secondary-content-btn {
+    @include respond-to('large') {
+      text-align: center;
+    }
+
+    .btn-services-details {
+      padding: 0.435rem 2.5rem 0.435rem;
+      border-radius: 0;
+      border-color: #ffffff;
+      border-left-color: transparent;
+      border-right-color: transparent;
+      font-weight: 300;
+      color: #ffffff;
+  
+      &:hover {
+        border-color: darken(#ffffff, 25%);
+        color: darken(#ffffff, 25%);
+        border-left-color: transparent;
+        border-right-color: transparent;
+      }
+    }
+
+  }
+}
+
+/* practice areas section */
+.practice_section {
+  padding-top: 7.5rem;
+  padding-bottom: 4rem;
+  background: url('../img/practice_areas_bg.jpg') center/cover no-repeat;
+
+  h2 {
+    margin-bottom: 4rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+
+  .practice-card {
+    height: 14rem;
+    border-radius: 9px;
+    background-color: rgba(#243240, 0.85);
+  }
+}
