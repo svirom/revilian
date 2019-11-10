@@ -345,17 +345,43 @@
   padding-bottom: 4rem;
   background: url('../img/practice_areas_bg.jpg') center/cover no-repeat;
 
+  @include respond-to('large') {
+    padding-top: 4rem;
+  }
+
   h2 {
     margin-bottom: 4rem;
+
+    @include respond-to('large') {
+      margin-bottom: 2rem;
+    }
+
+    @include respond-to('large') {
+      font-size: 1.875rem;
+    }
   }
 
   h4 {
     font-size: 1.25rem;
+
+    @include respond-to('small') {
+      font-size: 0.75rem;
+    }
+  }
+
+  img {
+    @include respond-to('small') {
+      max-width: 50px;
+    }
   }
 
   .practice-card {
     height: 14rem;
     border-radius: 9px;
     background-color: rgba(#243240, 0.85);
+
+    @include respond-to('small') {
+      height: 10rem;
+    }
   }
 }

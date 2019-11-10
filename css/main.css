@@ -892,17 +892,53 @@ li {
   background: url("../img/practice_areas_bg.jpg") center/cover no-repeat;
 }
 
+@media (max-width: 991px) {
+  .practice_section {
+    padding-top: 4rem;
+  }
+}
+
 .practice_section h2 {
   margin-bottom: 4rem;
+}
+
+@media (max-width: 991px) {
+  .practice_section h2 {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .practice_section h2 {
+    font-size: 1.875rem;
+  }
 }
 
 .practice_section h4 {
   font-size: 1.25rem;
 }
 
+@media (max-width: 575px) {
+  .practice_section h4 {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .practice_section img {
+    max-width: 50px;
+  }
+}
+
 .practice_section .practice-card {
   height: 14rem;
   border-radius: 9px;
   background-color: rgba(36, 50, 64, 0.85);
+}
+
+@media (max-width: 575px) {
+  .practice_section .practice-card {
+    height: 10rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */
