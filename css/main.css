@@ -928,6 +928,11 @@ li {
   }
 }
 
+.featured_press-secondary .secondary-services .secondary-content.secondary-content-digital ul {
+  -webkit-column-count: 2;
+          column-count: 2;
+}
+
 .featured_press-secondary .secondary-services .secondary-content.secondary-content-digital ul:before {
   display: none;
 }

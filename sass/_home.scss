@@ -301,6 +301,7 @@
         }
 
         ul {
+          column-count: 2;
           &:before {
             display: none;
           }
